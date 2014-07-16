@@ -10,26 +10,73 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    mc:Ignorable="d">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Grid x:Name="LayoutRoot" Background="{StaticResource ContrastBrush}">
+        <StackPanel Orientation="Vertical">
+            <Grid Margin="12"  Background="{StaticResource ForegroundBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/Icons/appbar.alien.png" Stretch="None"/>
+                
+                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="24,0" VerticalAlignment="Center">
+                    <TextBlock Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" FontSize="36" Foreground="{StaticResource MapprdroneBrush}" />
+                    <TextBlock Text="v2.0 Henrik Lábadi 2013-2014" Foreground="{StaticResource ContrastBrush}" />
+                    <TextBlock Text="    hlabadi@outlook.com" Foreground="{StaticResource ContrastBrush}" />
+                </StackPanel>
+                <TextBlock Grid.ColumnSpan="2" Grid.Row="1" Text="This application lets you fly your AR Drone 2.0 on a predefined grid. It also records a video for you. Connect your drone and tap on Fly to start. MAPPRDRONE REQUIRES AN AR DRONE 2.0!" VerticalAlignment="Bottom" Margin="12" Foreground="{StaticResource ContrastBrush}" TextWrapping="Wrap"/>
+                
+            </Grid>
+            <StackPanel Margin="12,0,12,12" Background="{StaticResource ForegroundBrush}" Orientation="Vertical">
+                <StackPanel Margin="0,12" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" Foreground="{StaticResource MapprdroneBrush}" FontSize="22" />
+                    <TextBlock Margin="0,-2" Text=" was made possible by:" Foreground="{StaticResource ContrastBrush}" FontSize="22" HorizontalAlignment="Center" />
+                </StackPanel>
+                <TextBlock Text="ARDrone2Windows by Parrot" HorizontalAlignment="Center" Foreground="{StaticResource ContrastBrush}" />
+                <TextBlock Text="Exo Font by Natanael Gama" HorizontalAlignment="Center" Foreground="{StaticResource ContrastBrush}" />
+                <TextBlock Margin="0,0,0,24" Text="WindowsIcons by Templarian" HorizontalAlignment="Center" Foreground="{StaticResource ContrastBrush}" />
+                
+            </StackPanel>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <StackPanel Margin="12,0,12,12" Background="{StaticResource MapprdroneBrush}" Orientation="Vertical">
+                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/Icons/appbar.heart.outline.png" />
+                    <StackPanel Grid.Column="1" Margin="0,12" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Margin="0,-2" Text="rate " Foreground="{StaticResource ContrastBrush}" FontSize="20" HorizontalAlignment="Center" />
+                        <TextBlock Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" Foreground="{StaticResource MapprdroneBrush}" FontSize="20" /> 
+                    </StackPanel>
+                </Grid>
+
+                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/Icons/appbar.social.twitter.png" />
+                    <TextBlock Text="follow me on twitter" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource ContrastBrush}"/>
+                </Grid>
+                <Grid Height="100" Margin="12,12,12,12" Background="{StaticResource ForegroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/Icons/appbar.social.github.octocat.png" />
+                    <TextBlock Text="get the source" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource ContrastBrush}"/>
+                </Grid>
+            </StackPanel>
         </StackPanel>
-
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
-        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>

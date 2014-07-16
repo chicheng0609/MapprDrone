@@ -136,6 +136,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Exo-Regular.otf" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -149,8 +150,11 @@
     <Content Include="Assets\Icons\appbar.alien.png" />
     <Content Include="Assets\Icons\appbar.connect.png" />
     <Content Include="Assets\Icons\appbar.disconnect.png" />
+    <Content Include="Assets\Icons\appbar.heart.outline.png" />
     <Content Include="Assets\Icons\appbar.plane.rotated.45.png" />
     <Content Include="Assets\Icons\appbar.settings.png" />
+    <Content Include="Assets\Icons\appbar.social.github.octocat.png" />
+    <Content Include="Assets\Icons\appbar.social.twitter.png" />
     <Content Include="Assets\Icons\appbar.weather.chance.png" />
     <Content Include="Assets\Icons\appbar.weather.overcast.png" />
     <Content Include="Assets\Icons\appbar.weather.rain.png" />
