@@ -21,14 +21,14 @@
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                
-                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/Icons/appbar.alien.png" Stretch="None"/>
-                
-                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="24,0" VerticalAlignment="Center">
-                    <TextBlock Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" FontSize="36" Foreground="{StaticResource MapprdroneBrush}" />
+
+
+              
+                <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" Margin="24,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock  Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" FontSize="36" Foreground="{StaticResource MapprdroneBrush}" />
                     <TextBlock Text="v2.0 Henrik Lábadi 2013-2014" Foreground="{StaticResource ContrastBrush}" />
                     <TextBlock Text="    hlabadi@outlook.com" Foreground="{StaticResource ContrastBrush}" />
                 </StackPanel>
@@ -47,7 +47,7 @@
             </StackPanel>
 
             <StackPanel Margin="12,0,12,12" Background="{StaticResource MapprdroneBrush}" Orientation="Vertical">
-                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}">
+                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}" Tap="Grid_Tap">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="2*" />
@@ -59,7 +59,7 @@
                     </StackPanel>
                 </Grid>
 
-                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}">
+                <Grid Height="100" Margin="12,12,12,0" Background="{StaticResource ForegroundBrush}" Tap="Grid_Tap_1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="2*" />
@@ -67,7 +67,7 @@
                     <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/Icons/appbar.social.twitter.png" />
                     <TextBlock Text="follow me on twitter" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource ContrastBrush}"/>
                 </Grid>
-                <Grid Height="100" Margin="12,12,12,12" Background="{StaticResource ForegroundBrush}">
+                <Grid Height="100" Margin="12,12,12,12" Background="{StaticResource ForegroundBrush}" Tap="Grid_Tap_2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="2*" />
