@@ -21,6 +21,31 @@
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="/Assets/Mapprdrone header.png" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="24" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="24" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="24" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="24" />
+            </Grid.ColumnDefinitions>
+            
+            <Border Grid.Column="1" Grid.ColumnSpan="3" Background="Black" />
+            <Border Grid.Row="2" Grid.Column="1" Background="Black" />
+            <Border Grid.Row="2" Grid.Column="3" Background="Black" />
+            <Border Grid.Row="4" Grid.Column="1" Background="Black" />
+            <Border Grid.Row="4" Grid.Column="3" Background="Black" />
+        </Grid>
+        
     </Grid>
 
 </phone:PhoneApplicationPage>
