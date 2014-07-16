@@ -10,9 +10,9 @@ using Microsoft.Phone.Shell;
 
 namespace MapprDrone.WP8
 {
-    public partial class SettingsPage : PhoneApplicationPage
+    public partial class HistoryPage : PhoneApplicationPage
     {
-        public SettingsPage()
+        public HistoryPage()
         {
             InitializeComponent();
         }

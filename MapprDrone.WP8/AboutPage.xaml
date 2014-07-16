@@ -28,7 +28,7 @@
 
               
                 <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" Margin="24,0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock  Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" FontSize="36" Foreground="{StaticResource MapprdroneBrush}" />
+                    <TextBlock  Text="mapprdrone" FontFamily=".\Assets\Exo-Regular.otf#Exo" FontSize="36" Foreground="{StaticResource MapprdroneBrush}" HorizontalAlignment="Center" />
                     <TextBlock Text="v2.0 Henrik Lábadi 2013-2014" Foreground="{StaticResource ContrastBrush}" />
                     <TextBlock Text="    hlabadi@outlook.com" Foreground="{StaticResource ContrastBrush}" />
                 </StackPanel>

@@ -99,6 +99,9 @@
     <Compile Include="FlyPage.xaml.cs">
       <DependentUpon>FlyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -108,9 +111,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -126,11 +126,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="HistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingsPage.xaml">
+    <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,11 +148,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Icons\appbar.alien.png" />
+    <Content Include="Assets\Icons\appbar.calendar.month.png" />
     <Content Include="Assets\Icons\appbar.connect.png" />
     <Content Include="Assets\Icons\appbar.disconnect.png" />
     <Content Include="Assets\Icons\appbar.heart.outline.png" />
     <Content Include="Assets\Icons\appbar.plane.rotated.45.png" />
-    <Content Include="Assets\Icons\appbar.settings.png" />
     <Content Include="Assets\Icons\appbar.social.github.octocat.png" />
     <Content Include="Assets\Icons\appbar.social.twitter.png" />
     <Content Include="Assets\Icons\appbar.weather.chance.png" />

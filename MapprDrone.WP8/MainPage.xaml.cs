@@ -29,7 +29,7 @@ namespace MapprDrone.WP8
 
         private void Grid_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/HistoryPage.xaml", UriKind.Relative));
         }
 
         private void Grid_Tap_2(object sender, System.Windows.Input.GestureEventArgs e)
