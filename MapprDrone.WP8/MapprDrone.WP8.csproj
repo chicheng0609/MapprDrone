@@ -90,8 +90,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FlyPage.xaml.cs">
+      <DependentUpon>FlyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -103,13 +109,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FlyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +146,17 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Icons\appbar.alien.png" />
+    <Content Include="Assets\Icons\appbar.connect.png" />
+    <Content Include="Assets\Icons\appbar.disconnect.png" />
+    <Content Include="Assets\Icons\appbar.plane.rotated.45.png" />
+    <Content Include="Assets\Icons\appbar.settings.png" />
+    <Content Include="Assets\Icons\appbar.weather.chance.png" />
+    <Content Include="Assets\Icons\appbar.weather.overcast.png" />
+    <Content Include="Assets\Icons\appbar.weather.rain.png" />
+    <Content Include="Assets\Icons\appbar.weather.snow.png" />
+    <Content Include="Assets\Icons\appbar.weather.sun.png" />
+    <Content Include="Assets\Icons\appbar.weather.thunder.png" />
     <Content Include="Assets\Mapprdrone header.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

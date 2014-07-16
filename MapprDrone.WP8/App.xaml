@@ -8,6 +8,9 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:MapprDrone.WP8" x:Key="LocalizedStrings"/>
+        <SolidColorBrush x:Key="ContrastBrush" Color="White"/>
+        <SolidColorBrush x:Key="ForegroundBrush" Color="Black"/>
+		<SolidColorBrush x:Key="MapprdroneBrush" Color="#FF0096FF"/>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

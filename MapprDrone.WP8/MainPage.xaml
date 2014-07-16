@@ -10,11 +10,10 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    SupportedOrientations="Portrait" Orientation="Portrait">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource ContrastBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="200" />
             <RowDefinition Height="*"/>
@@ -39,11 +38,61 @@
                 <ColumnDefinition Width="24" />
             </Grid.ColumnDefinitions>
             
-            <Border Grid.Column="1" Grid.ColumnSpan="3" Background="Black" />
-            <Border Grid.Row="2" Grid.Column="1" Background="Black" />
-            <Border Grid.Row="2" Grid.Column="3" Background="Black" />
-            <Border Grid.Row="4" Grid.Column="1" Background="Black" />
-            <Border Grid.Row="4" Grid.Column="3" Background="Black" />
+            <!-- Weather-->
+            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="{StaticResource MapprdroneBrush}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Assets/Icons/appbar.weather.sun.png" />
+                <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="London, United Kingdom" Foreground="{StaticResource ContrastBrush}" />
+                    <TextBlock Text="15 degrees" Foreground="{StaticResource ContrastBrush}" />
+                    <TextBlock Text="4 m/s wind" Foreground="{StaticResource ContrastBrush}" />
+                </StackPanel>
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Foreground="{StaticResource ContrastBrush}" Text="WEATHER" FontFamily="Segoe WP Black" FontWeight="Bold" FontSize="24" TextAlignment="Center" />
+            </Grid>
+            <!-- Fly -->
+
+            <Grid Grid.Row="2" Grid.Column="1" Background="Black" Tap="Grid_Tap">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="/Assets/Icons/appbar.plane.rotated.45.png" />
+                <TextBlock Grid.Row="1" Foreground="{StaticResource ContrastBrush}" Text="FLY" FontFamily="Segoe WP Black" FontWeight="Bold" FontSize="24" TextAlignment="Center"  />
+            </Grid>
+            <!-- Connect / Disconnect -->
+            <Grid Grid.Row="2" Grid.Column="3" Background="{StaticResource ForegroundBrush}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="/Assets/Icons/appbar.connect.png" />
+                <TextBlock Grid.Row="1" Foreground="{StaticResource ContrastBrush}" Text="DISCONNECT" FontFamily="Segoe WP Black" FontWeight="Bold" FontSize="24" TextAlignment="Center"  />
+            </Grid>
+            <!-- Fly settings -->
+            <Grid Grid.Row="4" Grid.Column="1" Background="Black" Tap="Grid_Tap_1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="/Assets/Icons/appbar.settings.png" />
+                <TextBlock Grid.Row="1" Foreground="{StaticResource ContrastBrush}" Text="SETTINGS" FontFamily="Segoe WP Black" FontWeight="Bold" FontSize="24" TextAlignment="Center"  />
+            </Grid>
+            <!-- About mapprdrone -->
+            <Grid Grid.Row="4" Grid.Column="3" Background="Black" Tap="Grid_Tap_2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="/Assets/Icons/appbar.alien.png" />
+                <TextBlock Grid.Row="1" Foreground="{StaticResource ContrastBrush}" Text="ABOUT" FontFamily="Segoe WP Black" FontWeight="Bold" FontSize="24" TextAlignment="Center"  />
+            </Grid>
         </Grid>
         
     </Grid>
