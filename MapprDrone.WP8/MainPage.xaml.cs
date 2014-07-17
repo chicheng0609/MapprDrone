@@ -8,19 +8,56 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MapprDrone.WP8.Resources;
+using MapprDrone.WP8.ViewModels;
+using System.IO.IsolatedStorage;
+using MapprDrone.WP8.Services;
 
 namespace MapprDrone.WP8
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private MainViewModel _vm;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            _vm = DataContext as MainViewModel;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (IsolatedStorageSettings.ApplicationSettings.Contains("LocationConsent"))
+            {
+                //User already gave us his agreement for using his position
+                if ((bool)IsolatedStorageSettings.ApplicationSettings["LocationConsent"] == true)
+                    
+                    return;
+            }
+
+    //Ask for user agreement in using his position
+            else
+            {
+                MessageBoxResult result =
+                            MessageBox.Show("To determine the weather at your current position, mapprdrone needs to access your location. Can mapprdone use your location?",
+                            "Location",
+                            MessageBoxButton.OKCancel);
+
+                if (result == MessageBoxResult.OK)
+                {
+                    IsolatedStorageSettings.ApplicationSettings["LocationConsent"] = true;
+                    WeatherService.Instance.ConsentUpdated(true);
+                }
+                else
+                {
+                    IsolatedStorageSettings.ApplicationSettings["LocationConsent"] = false;
+                }
+
+                IsolatedStorageSettings.ApplicationSettings.Save();
+            }
+        }
+        
 
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
@@ -35,6 +72,11 @@ namespace MapprDrone.WP8
         private void Grid_Tap_2(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
+        }
+
+        private void Grid_Tap_3(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            _vm.ConnectOrDisconnect();
         }
 
         // Sample code for building a localized ApplicationBar

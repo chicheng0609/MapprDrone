@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 8.00.0595 */
-/* at Mon Jul 14 18:56:40 2014
+/* at Wed Jul 16 21:09:01 2014
  */
-/* Compiler settings for C:\Users\Henrik\AppData\Local\Temp\ARDrone2Video.idl-4ee7be10:
+/* Compiler settings for C:\Users\Henrik\AppData\Local\Temp\ARDrone2Video.idl-fbab12e1:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0595 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
